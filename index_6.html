@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+            My First Sub-Window
+        </title>
+        <style>
+            .button {
+             background-color: #4CAF50; /* Green */
+             border: none;
+             color: white;
+             padding: 15px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+             font-size: 20px;
+             }
+
+             input{
+                 height:50px; width: 200px;font-size: 20px; text-align: center;
+             }
+
+             h2{
+                 text-align: center;
+             }
+
+             h1{
+                 background-color: dodgerblue; color: white;font-size: 50px;text-align: center;
+             }
+
+             .module {
+                resize:both;
+             }
+        </style>    
+        <script>
+        function go(){
+            var url = document.getElementById("input").value;
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("src",url);
+        }
+
+        function hgt(){
+            var h = document.getElementById("h").value;
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("height",h);
+        }
+
+        function wdt(){
+            var w = document.getElementById("w").value;
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("width",w);
+        }
+
+        function google(){
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("src","https://www.google.com/webhp?igu=1");
+        }
+
+        function hotstar(){
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("src","https://www.hotstar.com/");
+        }
+
+        function bbc(){
+            var frame = document.getElementById("iframe");
+            frame.setAttribute("src","https://www.bbc.com/");
+        }
+
+        </script>
+    </head>
+    <body>
+        <h1>My First Sub-WINDOW</h1>
+        <center><h2><input type = "text" id = "input" value = "Enter URL" style = "width:500; text-align: left">&nbsp;
+            <input type = "button" value = "GO" onclick = "go()" class = "button" style = "width:100px;">&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            FAVOURITES :
+            <input type = "button" value = "Google" onclick="google()" class = "button">&nbsp;
+            <input type = "button" value = "Hotstar" onclick="hotstar()" class = "button">&nbsp;
+            <input type = "button" value = "BBC" onclick="bbc()" class = "button">&nbsp;
+        
+        </h2></center><br>
+        <center><iframe width="80%" height="50%" id = "iframe" class = "module"></iframe><br></center><br>
+        
+        <center>
+        <form action="http://www.google.com/search" method="get">
+            <input type="text" name = "query" value = "Enter Query" style="width:500; text-align: left">&nbsp;
+            <input type="submit" value="GOOGLE Search" class = "button" style ="width: 250px;">
+        </form></center>
+        <h2>SUB-WINDOW SETTINGS</h2>
+        <h2>
+        Height of sub-Window :
+        <input type = "text" id = "h">&nbsp;<input type = "button" id = "hb" value = "SET" onclick="hgt()" class = "button">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+        Width of sub-Window :   
+        <input type = "text" id = "w">&nbsp;<input type = "button" id = "wb" value = "SET" onclick="wdt()" class = "button">
+        </h2>
+        <h2>OR Press F5 and then simply DRAG the Lower Right Corner of the SUB-WINDOW to desired size<br>
+        !!! REFRESH the page (Press F5) if some features don't work properly !!!</h2>
+        
+    </body>
+</html>
